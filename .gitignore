@@ -1,0 +1,22 @@
+
+# Python virtual environments
+.venv/
+venv/
+
+# Python-generated files
+__pycache__/
+*.pyc
+*.pyo
+
+# Testing and linting cache
+.pytest_cache/
+.pylint.d/
+.coverage
+htmlcov/
+
+# Editor settings
+.idea/
+.vscode/
+
+# Local environment variables
+.env
