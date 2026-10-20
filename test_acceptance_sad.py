@@ -27,7 +27,7 @@ def test_acceptance_missing_file(client):
 
     # Assertions:
     # 1. Ensure the response status code is 200, indicating the request was processed.
-    assert response.status_code == 200
+    assert response.status_code == 400
 
     # 2. Check for a meaningful error message in the response data.
     #    Modify the message check if your application uses a different error response text.

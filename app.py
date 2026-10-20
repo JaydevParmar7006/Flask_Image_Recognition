@@ -21,7 +21,7 @@ def predict_image_file():
     if uploaded_file is None or not uploaded_file.filename:
         return render_template(
             "result.html", err="File cannot be processed."
-        )
+        ), 400
 
     try:
         image = preprocess_img(uploaded_file.stream)
@@ -30,7 +30,7 @@ def predict_image_file():
         app.logger.warning("Image processing failed: %s", error)
         return render_template(
             "result.html", err="File cannot be processed."
-        )
+        ), 400
 
     return render_template(
         "result.html", predictions=str(prediction)
